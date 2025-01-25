@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://kv4ywg4es1hc"]
+
+[ext_resource type="Texture2D" uid="uid://cq4yjcp7iivwv" path="res://addons/screenplay/resources/icons/Interfaces/map-marker-3.svg" id="1_gf0j2"]
+
+[node name="VariableTypeButton" type="TextureButton"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_gf0j2")

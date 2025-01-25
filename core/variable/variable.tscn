@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxgqnmbxjmtji"]
+
+[ext_resource type="Script" uid="uid://cwal3055tjv07" path="res://addons/dialogue/core/variable/Variable.cs" id="1_1n5va"]
+[ext_resource type="Texture2D" uid="uid://dld3j4kv8vvrg" path="res://addons/screenplay/resources/icons/Interfaces/search.svg" id="1_nlo58"]
+[ext_resource type="Texture2D" uid="uid://cpd7ohv3acdtn" path="res://addons/screenplay/resources/icons/Interfaces/loader.svg" id="2_iqqe8"]
+
+[node name="Variable" type="LineEdit"]
+size_flags_horizontal = 3
+placeholder_text = "变量"
+script = ExtResource("1_1n5va")
+
+[node name="AddButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -8.0
+offset_bottom = 8.0
+grow_horizontal = 0
+grow_vertical = 2
+toggle_mode = true
+keep_pressed_outside = true
+texture_normal = ExtResource("1_nlo58")
+texture_pressed = ExtResource("2_iqqe8")

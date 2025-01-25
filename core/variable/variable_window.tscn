@@ -1,0 +1,136 @@
+[gd_scene load_steps=11 format=3 uid="uid://c6aivkjkm8se7"]
+
+[ext_resource type="Script" uid="uid://dxc6i5uqfh13g" path="res://addons/dialogue/core/variable/VariableWindow.cs" id="1_f7tt3"]
+[ext_resource type="PackedScene" uid="uid://dj1hr5fhp0xdd" path="res://addons/dialogue/core/variable/variable_popup_panel.tscn" id="2_2s3gs"]
+[ext_resource type="Texture2D" uid="uid://cq4yjcp7iivwv" path="res://addons/screenplay/resources/icons/Interfaces/map-marker-3.svg" id="2_teejk"]
+[ext_resource type="Texture2D" uid="uid://ceclij1cynjtu" path="res://addons/screenplay/resources/icons/Interfaces/plus.svg" id="2_vai0j"]
+[ext_resource type="Texture2D" uid="uid://cuugbu0w0hvqc" path="res://addons/screenplay/resources/icons/Interfaces/minus.svg" id="3_eflv0"]
+[ext_resource type="PackedScene" uid="uid://dkc8tsr7ea1gv" path="res://addons/dialogue/core/variable/variable_popup_menu.tscn" id="3_k3hw5"]
+[ext_resource type="PackedScene" uid="uid://bkj6an4jkabc8" path="res://addons/dialogue/editime/scenes/search_bar.tscn" id="4_g5fua"]
+[ext_resource type="Texture2D" uid="uid://wyd8ycggx8o4" path="res://addons/screenplay/resources/icons/Interfaces/settings.svg" id="4_punmj"]
+[ext_resource type="Texture2D" uid="uid://cbxwsvx22onyh" path="res://addons/screenplay/resources/icons/Interfaces/sun.svg" id="6_a2wes"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dh3oy"]
+font_color = Color(0.709668, 0.53343, 0.216561, 1)
+
+[node name="VariableWindow" type="Control"]
+custom_minimum_size = Vector2(300, 600)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -300.0
+offset_right = 140.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f7tt3")
+_variableAddButtonTexture2D = ExtResource("2_vai0j")
+_variableRemoveButtonTexture2D = ExtResource("3_eflv0")
+_variableEditButtonTexture2D = ExtResource("4_punmj")
+_localVariableType = ExtResource("2_teejk")
+_globalVariableType = ExtResource("6_a2wes")
+_variablePopupPanel = ExtResource("2_2s3gs")
+_variablePopupMenuScene = ExtResource("3_k3hw5")
+
+[node name="MainContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSplitContainer" type="VSplitContainer" parent="MainContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LocalSearchBar" parent="MainContainer/HSplitContainer/VBoxContainer" instance=ExtResource("4_g5fua")]
+layout_mode = 2
+placeholder_text = "筛选局部变量"
+
+[node name="LocalVariableTree" type="Tree" parent="MainContainer/HSplitContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 3
+allow_reselect = true
+allow_rmb_select = true
+hide_folding = true
+drop_mode_flags = 2
+select_mode = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MainContainer/HSplitContainer/VBoxContainer/LocalVariableTree"]
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -28.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="MainContainer/HSplitContainer/VBoxContainer/LocalVariableTree/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "提示：双击变量空白位置将参数设置到节点!"
+label_settings = SubResource("LabelSettings_dh3oy")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MainContainer/HSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GlobalSearchBar" parent="MainContainer/HSplitContainer/VBoxContainer2" instance=ExtResource("4_g5fua")]
+layout_mode = 2
+placeholder_text = "筛选全局变量"
+
+[node name="GlobalVariableTree" type="Tree" parent="MainContainer/HSplitContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 3
+allow_reselect = true
+allow_rmb_select = true
+hide_folding = true
+drop_mode_flags = 2
+select_mode = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MainContainer/HSplitContainer/VBoxContainer2/GlobalVariableTree"]
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -28.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="MainContainer/HSplitContainer/VBoxContainer2/GlobalVariableTree/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "提示：双击变量空白位置将参数设置到节点!"
+label_settings = SubResource("LabelSettings_dh3oy")

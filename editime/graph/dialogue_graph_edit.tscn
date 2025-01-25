@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://c041q6nf5pva3"]
+
+[ext_resource type="Script" uid="uid://xcutou1pxny4" path="res://addons/dialogue/editime/graph/DialogueGraphEdit.cs" id="1_82lf0"]
+[ext_resource type="PackedScene" uid="uid://tw5ooyq1qkwx" path="res://addons/dialogue/editime/graph/nodes/root_graph_node.tscn" id="2_hdy6p"]
+[ext_resource type="PackedScene" uid="uid://dyldl1m5725i6" path="res://addons/dialogue/editime/graph/nodes/dialog_graph_node.tscn" id="3_wh5t8"]
+[ext_resource type="PackedScene" uid="uid://c2hb50xybxj81" path="res://addons/dialogue/editime/graph/nodes/finished_graph_node.tscn" id="4_ect1y"]
+[ext_resource type="PackedScene" uid="uid://dfvnj30jce20i" path="res://addons/dialogue/editime/graph/nodes/option_graph_node.tscn" id="5_p72op"]
+[ext_resource type="PackedScene" uid="uid://bmudauxle3ru1" path="res://addons/dialogue/editime/graph/nodes/condition_graph_node.tscn" id="6_nap6e"]
+[ext_resource type="PackedScene" uid="uid://b3gw6t8egau3n" path="res://addons/dialogue/editime/graph/nodes/variable_graph_node.tscn" id="7_766lp"]
+
+[node name="DialogueGraphEdit" type="GraphEdit"]
+right_disconnects = true
+connection_lines_thickness = 2.0
+script = ExtResource("1_82lf0")
+_nodesScenes = {
+"Condition": ExtResource("6_nap6e"),
+"Dialog": ExtResource("3_wh5t8"),
+"Finished": ExtResource("4_ect1y"),
+"Option": ExtResource("5_p72op"),
+"Root": ExtResource("2_hdy6p"),
+"Variable": ExtResource("7_766lp")
+}
+
+[node name="GraphPopupMenu" type="PopupMenu" parent="."]
+item_count = 3
+item_0/text = "条件节点"
+item_0/id = 0
+item_1/text = "对话节点"
+item_1/id = 1
+item_2/text = "选项节点"
+item_2/id = 2
+
+[node name="NodePopupMenu" type="PopupMenu" parent="."]
+item_count = 3
+item_0/text = "Copy"
+item_0/id = 0
+item_1/text = "Paste"
+item_1/id = 1
+item_2/text = "Delete"
+item_2/id = 2
