@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://banfvon6ipud8"]
+
+[ext_resource type="Texture2D" uid="uid://cp2ogwx5jaccf" path="res://addons/dialogue/resources/icons/Medias/skip-back.svg" id="1_cgha3"]
+[ext_resource type="Texture2D" uid="uid://xa86q3sl6m8q" path="res://addons/dialogue/resources/icons/Medias/play-circle.svg" id="2_gkcne"]
+[ext_resource type="Texture2D" uid="uid://dwsvapvuilmjo" path="res://addons/dialogue/resources/icons/Medias/pause-circle.svg" id="3_7srm7"]
+[ext_resource type="Texture2D" uid="uid://cx11b0dji01ge" path="res://addons/dialogue/resources/icons/Medias/stop-circle.svg" id="4_xbj4y"]
+[ext_resource type="Texture2D" uid="uid://c73u7ce35t6yi" path="res://addons/dialogue/resources/icons/Medias/skip-forward.svg" id="5_44fw4"]
+
+[node name="DialogPlayer" type="HBoxContainer"]
+custom_minimum_size = Vector2(64, 16)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.0
+offset_top = -8.0
+offset_right = 38.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SkipBack" type="TextureButton" parent="."]
+layout_mode = 2
+tooltip_text = "回退"
+texture_normal = ExtResource("1_cgha3")
+
+[node name="Play" type="TextureButton" parent="."]
+layout_mode = 2
+tooltip_text = "播放/暂停"
+toggle_mode = true
+texture_normal = ExtResource("2_gkcne")
+texture_pressed = ExtResource("3_7srm7")
+
+[node name="stop" type="TextureButton" parent="."]
+layout_mode = 2
+tooltip_text = "停止"
+texture_normal = ExtResource("4_xbj4y")
+
+[node name="SkipForward" type="TextureButton" parent="."]
+layout_mode = 2
+tooltip_text = "前进"
+texture_normal = ExtResource("5_44fw4")

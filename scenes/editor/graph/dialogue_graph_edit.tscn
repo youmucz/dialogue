@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://c041q6nf5pva3"]
+
+[ext_resource type="Script" uid="uid://xcutou1pxny4" path="res://addons/dialogue/scripts/editor/graph/DialogueGraphEdit.cs" id="1_y6rd4"]
+[ext_resource type="PackedScene" uid="uid://bmudauxle3ru1" path="res://addons/dialogue/scenes/editor/nodes/condition_graph_node.tscn" id="2_bivlj"]
+[ext_resource type="PackedScene" uid="uid://dyldl1m5725i6" path="res://addons/dialogue/scenes/editor/nodes/dialog_graph_node.tscn" id="3_hr0wc"]
+[ext_resource type="PackedScene" uid="uid://c2hb50xybxj81" path="res://addons/dialogue/scenes/editor/nodes/finished_graph_node.tscn" id="4_njv0k"]
+[ext_resource type="PackedScene" uid="uid://dfvnj30jce20i" path="res://addons/dialogue/scenes/editor/nodes/option_graph_node.tscn" id="5_6me0b"]
+[ext_resource type="PackedScene" uid="uid://tw5ooyq1qkwx" path="res://addons/dialogue/scenes/editor/nodes/root_graph_node.tscn" id="6_npjq3"]
+[ext_resource type="PackedScene" uid="uid://b3gw6t8egau3n" path="res://addons/dialogue/scenes/editor/nodes/variable_graph_node.tscn" id="7_tnmvj"]
+
+[node name="DialogueGraphEdit" type="GraphEdit"]
+right_disconnects = true
+connection_lines_thickness = 2.0
+script = ExtResource("1_y6rd4")
+_nodesScenes = {
+"Condition": ExtResource("2_bivlj"),
+"Dialog": ExtResource("3_hr0wc"),
+"Finished": ExtResource("4_njv0k"),
+"Option": ExtResource("5_6me0b"),
+"Root": ExtResource("6_npjq3"),
+"Variable": ExtResource("7_tnmvj")
+}
+
+[node name="GraphPopupMenu" type="PopupMenu" parent="."]
+
+[node name="NodePopupMenu" type="PopupMenu" parent="."]
+item_count = 3
+item_0/text = "Copy"
+item_0/id = 0
+item_1/text = "Paste"
+item_1/id = 1
+item_2/text = "Delete"
+item_2/id = 2

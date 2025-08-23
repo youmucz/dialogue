@@ -7,7 +7,7 @@ namespace Story.Dialogue.Editor
 	public partial class DialoguePlugin : EditorPlugin
 	{
 		private static MainWindow _mainWindowInstance;
-		private PackedScene _mainWindow = ResourceLoader.Load<PackedScene>("res://addons/dialogue/editime/scenes/main_window.tscn");
+		private PackedScene _mainWindow = ResourceLoader.Load<PackedScene>("res://addons/dialogue/scenes/editor/main_window.tscn");
 	
 		public override void _EnterTree()
 		{
