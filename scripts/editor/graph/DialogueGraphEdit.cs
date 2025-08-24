@@ -1,3 +1,6 @@
+using System;
+using Story.Dialogue.Core.Data;
+
 namespace Story.Dialogue.Graph;
 
 using Godot;
@@ -101,11 +104,12 @@ public partial class DialogueGraphEdit : GraphEdit
 			foreach (var variable in value)
 			{
 				var nodeType = variable["NodeType"];
+				var nodeName = Guid.NewGuid().ToString();
 				
 				var data = new Dictionary
 				{
 					{ "NodeType", nodeType },
-					{ "NodeName", nodeType},
+					{ "NodeName", nodeName},
 					{"NodeCategory", nodeCategory},
 					{"NodePositionOffset", Vector2.Zero}
 				};

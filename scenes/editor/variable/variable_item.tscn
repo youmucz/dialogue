@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b7rfne0myu5bf"]
 
-[ext_resource type="Script" uid="uid://diuvcviijhue5" path="res://addons/dialogue/scripts/core/variable/VariableItem.cs" id="1_locy0"]
-[ext_resource type="Texture2D" uid="uid://dllpe2316rjao" path="res://addons/dialogue/resources/icons/Interfaces/trash.svg" id="2_tgh3j"]
+[ext_resource type="Script" uid="uid://diuvcviijhue5" path="res://addons/dialogue/scripts/editor/ui/variable/VariableItem.cs" id="1_locy0"]
+[ext_resource type="Texture2D" uid="uid://dllpe2316rjao" path="res://addons/screenplay/resources/icons/Interfaces/trash.svg" id="2_tgh3j"]
 
 [node name="VariableItem" type="BoxContainer"]
 script = ExtResource("1_locy0")

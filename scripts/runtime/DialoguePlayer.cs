@@ -1,5 +1,6 @@
 using Godot;
 using Story.Dialogue.Core;
+using Story.Dialogue.Core.Data;
 
 namespace Story.Dialogue.Runtime
 {

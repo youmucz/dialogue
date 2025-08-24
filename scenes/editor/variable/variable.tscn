@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dxgqnmbxjmtji"]
 
-[ext_resource type="Script" uid="uid://cwal3055tjv07" path="res://addons/dialogue/scripts/core/variable/Variable.cs" id="1_1n5va"]
-[ext_resource type="Texture2D" uid="uid://dld3j4kv8vvrg" path="res://addons/dialogue/resources/icons/Interfaces/search.svg" id="1_nlo58"]
-[ext_resource type="Texture2D" uid="uid://cpd7ohv3acdtn" path="res://addons/dialogue/resources/icons/Interfaces/loader.svg" id="2_iqqe8"]
+[ext_resource type="Script" uid="uid://cwal3055tjv07" path="res://addons/dialogue/scripts/editor/ui/variable/Variable.cs" id="1_1n5va"]
+[ext_resource type="Texture2D" uid="uid://dld3j4kv8vvrg" path="res://addons/screenplay/resources/icons/Interfaces/search.svg" id="1_nlo58"]
+[ext_resource type="Texture2D" uid="uid://cpd7ohv3acdtn" path="res://addons/screenplay/resources/icons/Interfaces/loader.svg" id="2_iqqe8"]
 
 [node name="Variable" type="LineEdit"]
 size_flags_horizontal = 3

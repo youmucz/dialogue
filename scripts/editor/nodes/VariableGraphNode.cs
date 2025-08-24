@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Godot;
 using Godot.Collections;
+using Story.Dialogue.Runtime.Nodes;
 using Story.Dialogue.Utils;
 using Story.Dialogue.Variable;
 

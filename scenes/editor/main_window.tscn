@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://2ym8kkvuukjd" path="res://addons/dialogue/scripts/editor/MainWindow.cs" id="1_es4xe"]
 [ext_resource type="PackedScene" uid="uid://banfvon6ipud8" path="res://addons/dialogue/scenes/editor/dialog_player.tscn" id="2_na0j5"]
 [ext_resource type="PackedScene" uid="uid://bmvil7yqninxd" path="res://addons/dialogue/scenes/editor/workspace.tscn" id="2_oj46j"]
-[ext_resource type="Texture2D" uid="uid://gdtcq0gi0dlk" path="res://addons/dialogue/resources/icons/Arrows/chevron-left.svg" id="3_1sirs"]
+[ext_resource type="Texture2D" uid="uid://gdtcq0gi0dlk" path="res://addons/screenplay/resources/icons/Arrows/chevron-left.svg" id="3_1sirs"]
 [ext_resource type="PackedScene" uid="uid://c6aivkjkm8se7" path="res://addons/dialogue/scenes/editor/variable/variable_window.tscn" id="3_lvnde"]
-[ext_resource type="Texture2D" uid="uid://buysmf6n8g8ve" path="res://addons/dialogue/resources/icons/Arrows/chevron-right.svg" id="4_8v02q"]
+[ext_resource type="Texture2D" uid="uid://buysmf6n8g8ve" path="res://addons/screenplay/resources/icons/Arrows/chevron-right.svg" id="4_8v02q"]
 [ext_resource type="Script" uid="uid://buavm47hppb3x" path="res://addons/dialogue/scripts/editor/FileManager.cs" id="5_kc577"]
 [ext_resource type="PackedScene" uid="uid://c041q6nf5pva3" path="res://addons/dialogue/scenes/editor/graph/dialogue_graph_edit.tscn" id="8_yw1rm"]
 

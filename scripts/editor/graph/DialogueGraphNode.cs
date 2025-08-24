@@ -1,3 +1,4 @@
+using Story.Dialogue.Core.Data;
 using Story.Dialogue.Editor;
 
 namespace Story.Dialogue.Graph;

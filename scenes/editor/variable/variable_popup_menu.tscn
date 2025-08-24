@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dkc8tsr7ea1gv"]
 
-[ext_resource type="Script" uid="uid://b4lyv5tlhvtda" path="res://addons/dialogue/scripts/core/variable/VariablePopupMenu.cs" id="1_wv435"]
+[ext_resource type="Script" uid="uid://b4lyv5tlhvtda" path="res://addons/dialogue/scripts/editor/ui/variable/VariablePopupMenu.cs" id="1_wv435"]
 
 [node name="VariablePopupMenu" type="PopupMenu"]
 auto_translate_mode = 1

@@ -1,3 +1,5 @@
+using Story.Dialogue.Core.Data;
+
 namespace Story.Dialogue.Variable;
 
 using System;

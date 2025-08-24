@@ -1,14 +1,14 @@
 [gd_scene load_steps=11 format=3 uid="uid://c6aivkjkm8se7"]
 
-[ext_resource type="Script" uid="uid://dxc6i5uqfh13g" path="res://addons/dialogue/scripts/core/variable/VariableWindow.cs" id="1_f7tt3"]
+[ext_resource type="Script" uid="uid://dxc6i5uqfh13g" path="res://addons/dialogue/scripts/editor/ui/variable/VariableWindow.cs" id="1_f7tt3"]
 [ext_resource type="PackedScene" uid="uid://dj1hr5fhp0xdd" path="res://addons/dialogue/scenes/editor/variable/variable_popup_panel.tscn" id="2_2s3gs"]
-[ext_resource type="Texture2D" uid="uid://cq4yjcp7iivwv" path="res://addons/dialogue/resources/icons/Interfaces/map-marker-3.svg" id="2_teejk"]
-[ext_resource type="Texture2D" uid="uid://ceclij1cynjtu" path="res://addons/dialogue/resources/icons/Interfaces/plus.svg" id="2_vai0j"]
-[ext_resource type="Texture2D" uid="uid://cuugbu0w0hvqc" path="res://addons/dialogue/resources/icons/Interfaces/minus.svg" id="3_eflv0"]
+[ext_resource type="Texture2D" uid="uid://cq4yjcp7iivwv" path="res://addons/screenplay/resources/icons/Interfaces/map-marker-3.svg" id="2_teejk"]
+[ext_resource type="Texture2D" uid="uid://ceclij1cynjtu" path="res://addons/screenplay/resources/icons/Interfaces/plus.svg" id="2_vai0j"]
+[ext_resource type="Texture2D" uid="uid://cuugbu0w0hvqc" path="res://addons/screenplay/resources/icons/Interfaces/minus.svg" id="3_eflv0"]
 [ext_resource type="PackedScene" uid="uid://dkc8tsr7ea1gv" path="res://addons/dialogue/scenes/editor/variable/variable_popup_menu.tscn" id="3_k3hw5"]
 [ext_resource type="PackedScene" uid="uid://bkj6an4jkabc8" path="res://addons/dialogue/scenes/editor/ui/search_bar.tscn" id="4_g5fua"]
-[ext_resource type="Texture2D" uid="uid://wyd8ycggx8o4" path="res://addons/dialogue/resources/icons/Interfaces/settings.svg" id="4_punmj"]
-[ext_resource type="Texture2D" uid="uid://cbxwsvx22onyh" path="res://addons/dialogue/resources/icons/Interfaces/sun.svg" id="6_a2wes"]
+[ext_resource type="Texture2D" uid="uid://wyd8ycggx8o4" path="res://addons/screenplay/resources/icons/Interfaces/settings.svg" id="4_punmj"]
+[ext_resource type="Texture2D" uid="uid://cbxwsvx22onyh" path="res://addons/screenplay/resources/icons/Interfaces/sun.svg" id="6_a2wes"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dh3oy"]
 font_color = Color(0.709668, 0.53343, 0.216561, 1)
