@@ -150,7 +150,7 @@ public partial class DialogueGraphEdit : GraphEdit
 		// 	if (newNode.Base.NodeType == "Root") _rootNode = (RootGraphNode)newNode;
 		// }
 
-		foreach (var c in data.Connection)
+		foreach (var c in data.Connections)
 		{
 			ConnectNode((StringName)c["from_node"], (int)c["from_port"], (StringName)c["to_node"], (int)c["to_port"]);
 		}
@@ -172,7 +172,7 @@ public partial class DialogueGraphEdit : GraphEdit
 		}
 		DialogGraph.NodeData = data;
 		
-		DialogGraph.Connection = GetConnectionList();
+		DialogGraph.Connections = GetConnectionList();
 		
 		Player.Dialogue = DialogGraph;
 		

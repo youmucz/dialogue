@@ -25,7 +25,6 @@ namespace Story.Dialogue.Core.Data
         [Export] public Godot.Collections.Dictionary<string, Dictionary> Variables { get; set; } = new();
         /// <summary> 全局变量系统,当前对话存储的全局变量 </summary>
         [Export] public Godot.Collections.Dictionary<string, Dictionary> GlobalVariables { get; set; } = new();
-        
         /// <summary> 节点数据 </summary>
         [Export] public Array<Dictionary> NodeData = new (){
             new Dictionary
@@ -38,12 +37,12 @@ namespace Story.Dialogue.Core.Data
         };
         
         /// <summary> 节点连接信息 </summary>
-        [Export] public Array<Dictionary> Connection = new ();
+        [Export] public Array<Dictionary> Connections = new ();
         
-        public Dictionary NodeMetaClasses = new ();
         public List<DialogueNode> Nodes { get; set; } = new();
         
         private RootNode _rootNode;
+        private List<DialogueConnection> _connections = new ();
         
         #endregion
 
@@ -63,23 +62,33 @@ namespace Story.Dialogue.Core.Data
                 meta.Initialize();
                 Nodes.Add(meta);
             }
+            
+            foreach (var c in Connections)
+            {
+                var connection = new DialogueConnection(
+                    (string)c["from_node"], (int)c["from_port"], 
+                    (string)c["to_node"], (int)c["to_port"]
+                    );
+                
+                _connections.Add(connection);
+            }
+        }
+        
+        public RootNode GetRootNode()
+        {
+            return _rootNode;
         }
 
         public DialogueNode GetNodeByName(string nodeName)
         {
             return Nodes.FirstOrDefault(n => n.NodeName == nodeName);
         }
-
-        public RootNode GetRootNode()
-        {
-            return _rootNode;
-        }
-
+        
         public Array<DialogueNode> GetNextNodeByName(StringName name)
         {
             var toNode = new Array<DialogueNode>();
             
-            foreach (var connect in Connection)
+            foreach (var connect in Connections)
             {
                 if ((StringName)connect["from_node"] == name)
                 {
@@ -88,6 +97,32 @@ namespace Story.Dialogue.Core.Data
             }
 
             return toNode;
+        }
+        
+        /// <summary>
+        /// 获取节点的所有连接信息
+        /// </summary>
+        /// <param name="nodeName"></param>
+        /// <returns></returns>
+        public List<DialogueConnection> GetNodeConnections(string nodeName)
+        {
+            return _connections.Where(c => c.FromNode == nodeName || c.ToNode == nodeName).ToList();
+        }
+        
+        /// <summary>
+        /// 获取指定节点所有后续直接链接节点
+        /// </summary>
+        /// <param name="nodeName"></param>
+        /// <returns></returns>
+        public List<DialogueNode> GetConnectedNodes(string nodeName)
+        {
+            var connections = GetNodeConnections(nodeName);
+            var connectedNames = connections
+                .Where(c => c.FromNode == nodeName)
+                .Select(c => c.ToNode)
+                .ToList();
+            
+            return Nodes.Where(n => connectedNames.Contains(n.NodeName)).ToList();
         }
     }
 }

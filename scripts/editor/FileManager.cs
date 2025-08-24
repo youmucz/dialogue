@@ -6,7 +6,7 @@ using Story.Dialogue.Graph;
 namespace Story.Dialogue.Editor
 {
 
-	[Tool, GlobalClass, Icon("res://addons/dialogue/resources/icons/file_manager.svg")]
+	[Tool, GlobalClass]
 	public partial class FileManager : Node
 	{
 		public MainWindow MainWindow;

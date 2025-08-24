@@ -84,7 +84,7 @@ namespace Story.Dialogue.Runtime
 			}
 			else
 			{
-				var nextNodes = Dialogue.GetNextNodeByName(_prevNode);
+				var nextNodes = Dialogue.GetConnectedNodes(_prevNode);
 				// 默认除了选择节点外都只有一个子节点
 				if (nextNodes.Count is 0) return;
 				
