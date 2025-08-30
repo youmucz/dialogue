@@ -270,3 +270,4 @@ This is the dialogue editor which is one part of the game story toolsets.
   └── Export/                             # 导出配置
   ├── Templates/
   └── Presets/
+- add: 新增dialogue connection
